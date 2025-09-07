@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vibrant Reads - Your Online Library</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <h1>Vibrant Reads</h1>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#browse">Browse Books</a></li>
+                    <li><a href="#borrowing-history">Borrowing History</a></li>
+                    <li><a href="#" id="themeToggle">Toggle Theme</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="hero-section">
+            <div class="hero-content">
+                <h2>Discover Your Next Great Read</h2>
+                <p>Explore a world of stories, knowledge, and adventure.</p>
+                <div class="search-bar">
+                    <input type="text" id="searchInput" placeholder="Search by title, author, or genre...">
+                    <button id="searchButton">Search</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="browse" class="section-padded">
+            <h2>Our Collection</h2>
+            <div class="category-filters">
+                <button class="filter-btn active" data-category="all">All</button>
+                <button class="filter-btn" data-category="fiction">Fiction</button>
+                <button class="filter-btn" data-category="science">Science</button>
+                <button class="filter-btn" data-category="fantasy">Fantasy</button>
+                <button class="filter-btn" data-category="history">History</button>
+                <button class="filter-btn" data-category="biography">Biography</button>
+            </div>
+            <div id="bookGrid" class="book-grid">
+                <!-- Books will be loaded here by JavaScript -->
+            </div>
+        </section>
+
+        <section id="borrowing-history" class="section-padded hidden">
+            <h2>Your Borrowing History</h2>
+            <div id="historyList" class="history-list">
+                <p class="empty-message">No books borrowed yet. Start exploring!</p>
+                <!-- Borrowed books will be listed here -->
+            </div>
+        </section>
+
+        <div id="bookDetailsModal" class="modal hidden">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <div id="modalDetails">
+                    <!-- Detailed book info will go here -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2023 Vibrant Reads. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
